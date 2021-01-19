@@ -23,7 +23,9 @@ def district(name):
         return 'Prenzlauer Berg'
     elif 'mitte' in name.lower() or 'central berlin' in name.lower():
         return 'Mitte'
-    elif 'friedrichshain' in name.lower() or 'freidrichshain' in name.lower() or 'ostkreuz' in name.lower():
+    elif 'friedrichshain-kreuzberg' in name.lower():
+        return 'Friedrichshain-Kreuzberg'
+    elif ' friedrichshain' in name.lower() or ' freidrichshain' in name.lower() or ' ostkreuz' in name.lower():
         return 'Friedrichshain'
     elif 'neukölln' in name.lower() or 'reuterkiez' in name.lower():
         return 'Neukölln'
@@ -93,6 +95,32 @@ def district(name):
         return('Other')
 
 df['district'] = df['Main title'].apply(district)
+#df['district'].value_counts()
+
+#property type
+df['property'] = df['property_type'].apply(lambda x: x.split()[0])
+df['property'].value_counts()
+
+#apartment size
+def size(prop_type):
+    if 'm2' in prop_type:
+        return int(prop_type.split()[-2])
+    else:
+        return 0
+
+df['property_size'] = df['property_type'].apply(size)
 
 
+#flatmates
+def flatmates(prop_type):
+    if 'flatmates' in prop_type:
+        return int(prop_type.split()[1])
+    else: 
+        return 0
 
+df['flatmates'] = df['property_type'].apply(flatmates)
+
+
+#monthly price
+df['monthly_price_min'] = df['monthly_rent'].apply(lambda x: x.split()[-2].split('-')[0])
+df['monthly_price_max'] = df['monthly_rent'].apply(lambda x: x.split()[-2].split('-')[-1])
