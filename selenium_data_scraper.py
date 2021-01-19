@@ -12,14 +12,14 @@ from selenium import webdriver
 import time
 import pandas as pd
 
-def get_apartments(num_apartments, verbose, slp_time):
+def get_apartments(city, num_apartments, path, verbose, slp_time):
     
 ##Running webdriver
     chrome_options = webdriver.ChromeOptions() 
-    chrome_options.add_experimental_option("excludeSwitches", ['enable-automation']) 
+    chrome_options.add_experimental_option("excludeSwitches", ['enable-automation']) #solving the "chrome is being controlled by automated software" potential issue
     driver = webdriver.Chrome(executable_path='/Users/andrii/Documents/Git/ds_apartment_price_estimationa_project/chromedriver', options=chrome_options)
     driver.set_window_size(1600, 1000)
-    url = 'https://www.spotahome.com/berlin/page:10'
+    url = 'https://www.spotahome.com/'+city+''  
     driver.get(url)
     apartments = []
     
@@ -108,5 +108,4 @@ def get_apartments(num_apartments, verbose, slp_time):
             
     return pd.DataFrame(apartments)
 
-df = get_apartments(500, False, 9)
-df.to_csv("df_apartments_1.csv") 
+
