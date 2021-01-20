@@ -97,9 +97,11 @@ def district(name):
 df['district'] = df['Main title'].apply(district)
 #df['district'].value_counts()
 
+
 #property type
 df['property'] = df['property_type'].apply(lambda x: x.split()[0])
 df['property'].value_counts()
+
 
 #apartment size
 def size(prop_type):
@@ -120,7 +122,36 @@ def flatmates(prop_type):
 
 df['flatmates'] = df['property_type'].apply(flatmates)
 
-
-#monthly price
+#avg monthly price
 df['monthly_price_min'] = df['monthly_rent'].apply(lambda x: x.split()[-2].split('-')[0])
 df['monthly_price_max'] = df['monthly_rent'].apply(lambda x: x.split()[-2].split('-')[-1])
+
+def integer(price):
+    if price.isdigit() is True:
+        return int(price)
+    else:
+        return 0
+
+df['monthly_price_min'] = df['monthly_price_min'].apply(integer)
+df['monthly_price_max'] = df['monthly_price_max'].apply(integer)
+df['monthly_price_avg'] = (df.monthly_price_min + df.monthly_price_max)/2
+
+
+
+def null_to_avg(price):
+    if price == 0:
+        return df.groupby('property').mean()['monthly_price_avg'][1]
+    else:
+        return price
+    
+df['monthly_price_avg'] = df['monthly_price_avg'].apply(null_to_avg)
+
+
+# defining what included in the bills
+df['bills'] = df['bills'].apply(lambda x: ' '.join(x.splitlines())) #transforming multiple text lines into list and converting list to string  
+
+df['bills_electricity_yn'] = df['bills'].apply(lambda x: 1 if 'electricity included' in x.lower() else 0)
+df['bills_water_yn'] = df['bills'].apply(lambda x: 1 if 'water included' in x.lower() else 0)
+df['bills_gas_yn'] = df['bills'].apply(lambda x: 1 if 'gas included' in x.lower() else 0)
+df['bills_wifi_yn'] = df['bills'].apply(lambda x: 1 if 'wifi included' in x.lower() else 0)
+
