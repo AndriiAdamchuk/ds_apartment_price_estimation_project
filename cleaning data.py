@@ -103,16 +103,6 @@ df['property'] = df['property_type'].apply(lambda x: x.split()[0])
 df['property'].value_counts()
 
 
-#apartment size
-def size(prop_type):
-    if 'm2' in prop_type:
-        return int(prop_type.split()[-2])
-    else:
-        return 0
-
-df['property_size'] = df['property_type'].apply(size)
-
-
 #flatmates
 def flatmates(prop_type):
     if 'flatmates' in prop_type:
@@ -171,7 +161,24 @@ df['feature_elevator_yn'] = df['property_features'].apply(lambda x: 1 if 'elevat
 
 
 #deposit
-
 df['deposit'] = df['deposit'].apply(lambda x: x[0] if "month's rent" in x.lower() or "months' rent" in x.lower() else x).apply(lambda x: x.split('€')[0]).apply(lambda x: 0 if 'undefined' in x.lower() else x).apply(lambda x: str(x).replace(",", ""))
-df['deposit'] = df['deposit'].apply(lambda x: int(x)).apply(lambda x: (x * (df.monthly_price_avg)) if x == 1 else x)
+df['deposit'] = df.apply(lambda x: int(x['deposit']) * x['monthly_price_avg'] if int(x['deposit']) <= 4 else int(x['deposit']), axis = 1)   
 
+#languages (english, german, russian, spanish)
+df['property_rules'] = df['property_rules'].apply(lambda x: ' '.join(str(x).splitlines())) #transforming multiple text lines into list and converting list to string
+
+df['english_spoken_yn'] = df['property_rules'].apply(lambda x: 1 if 'english' in x.lower() else 0)                          #english
+df['german_spoken_yn'] = df['property_rules'].apply(lambda x: 1 if 'german' in x.lower() else 0)                            #german
+df['russian_spoken_yn'] = df['property_rules'].apply(lambda x: 1 if 'russian' in x.lower() else 0)                          #russian
+df['spanish_spoken_yn'] = df['property_rules'].apply(lambda x: 1 if 'spanish' in x.lower() else 0)                          #spanish
+
+#apartment size
+def size(prop_type):
+    if 'm2' in prop_type:
+        return int(prop_type.split()[-2])
+    else:
+        return 0
+
+df['property_size'] = df['property_type'].apply(size)
+
+#calculating property size per person if a property type is a room
