@@ -150,8 +150,28 @@ df['monthly_price_avg'] = df['monthly_price_avg'].apply(null_to_avg)
 # defining what included in the bills
 df['bills'] = df['bills'].apply(lambda x: ' '.join(x.splitlines())) #transforming multiple text lines into list and converting list to string  
 
-df['bills_electricity_yn'] = df['bills'].apply(lambda x: 1 if 'electricity included' in x.lower() else 0)
-df['bills_water_yn'] = df['bills'].apply(lambda x: 1 if 'water included' in x.lower() else 0)
-df['bills_gas_yn'] = df['bills'].apply(lambda x: 1 if 'gas included' in x.lower() else 0)
-df['bills_wifi_yn'] = df['bills'].apply(lambda x: 1 if 'wifi included' in x.lower() else 0)
+df['bills_electricity_yn'] = df['bills'].apply(lambda x: 1 if 'electricity included' in x.lower() else 0) #electricity
+df['bills_water_yn'] = df['bills'].apply(lambda x: 1 if 'water included' in x.lower() else 0) #water
+df['bills_gas_yn'] = df['bills'].apply(lambda x: 1 if 'gas included' in x.lower() else 0) #gas
+df['bills_wifi_yn'] = df['bills'].apply(lambda x: 1 if 'wifi included' in x.lower() else 0) #wifi
+
+
+# defining property features
+df['property_features'] = df['property_features'].apply(lambda x: ' '.join(str(x).splitlines())) #transforming multiple text lines into list and converting list to string  
+
+df['feature_furnished_yn'] = df['property_features'].apply(lambda x: 1 if 'furnished' in x.lower() else 0)                  #furnished
+df['feature_dishwasher_yn'] = df['property_features'].apply(lambda x: 1 if 'dishwasher' in x.lower() else 0)                #dishwasher
+df['feature_washing_machine_yn'] = df['property_features'].apply(lambda x: 1 if 'washing machine' in x.lower() else 0)      #washing machine
+df['feature_equipped_kitchen_yn'] = df['property_features'].apply(lambda x: 1 if 'equipped kitchen' in x.lower() else 0)    #equipped kitchen
+df['feature_balcony_yn'] = df['property_features'].apply(lambda x: 1 if 'balcony or terrace' in x.lower() else 0)           #balcony or terrace
+df['feature_parking_yn'] = df['property_features'].apply(lambda x: 1 if 'parking' in x.lower() else 0)                      #parking
+df['feature_tv_yn'] = df['property_features'].apply(lambda x: 1 if 'tv' in x.lower() else 0)                                #tv
+df['feature_oven_yn'] = df['property_features'].apply(lambda x: 1 if 'oven' in x.lower() else 0)                            #oven
+df['feature_elevator_yn'] = df['property_features'].apply(lambda x: 1 if 'elevator' in x.lower() else 0)                    #elevator
+
+
+#deposit
+
+df['deposit'] = df['deposit'].apply(lambda x: x[0] if "month's rent" in x.lower() or "months' rent" in x.lower() else x).apply(lambda x: x.split('€')[0]).apply(lambda x: 0 if 'undefined' in x.lower() else x).apply(lambda x: str(x).replace(",", ""))
+df['deposit'] = df['deposit'].apply(lambda x: int(x)).apply(lambda x: (x * (df.monthly_price_avg)) if x == 1 else x)
 
