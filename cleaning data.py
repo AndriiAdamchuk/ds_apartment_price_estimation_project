@@ -7,7 +7,6 @@ Created on Tue Jan 19 21:59:50 2021
 """
 
 import pandas as pd
-import numpy as np
 
 df = pd.read_csv('df_apartments.csv')
 
@@ -130,24 +129,25 @@ df['monthly_price_avg'] = (df.monthly_price_min + df.monthly_price_max)/2
 
 def null_to_avg(price):
     if price == 0:
-        return df.groupby('property').mean()['monthly_price_avg'][1]
+        return df[df['monthly_price_avg'] > 0].groupby('property').mean()['monthly_price_avg'][1]
     else:
         return price
+
     
 df['monthly_price_avg'] = df['monthly_price_avg'].apply(null_to_avg)
 
 
-# defining what included in the bills
-df['bills'] = df['bills'].apply(lambda x: ' '.join(x.splitlines())) #transforming multiple text lines into list and converting list to string  
+# defining what's included in the bills
+df['bills'] = df['bills'].apply(lambda x: ' '.join(x.splitlines()))                                                         #transforming multiple text lines into list and converting list to string  
 
-df['bills_electricity_yn'] = df['bills'].apply(lambda x: 1 if 'electricity included' in x.lower() else 0) #electricity
-df['bills_water_yn'] = df['bills'].apply(lambda x: 1 if 'water included' in x.lower() else 0) #water
-df['bills_gas_yn'] = df['bills'].apply(lambda x: 1 if 'gas included' in x.lower() else 0) #gas
-df['bills_wifi_yn'] = df['bills'].apply(lambda x: 1 if 'wifi included' in x.lower() else 0) #wifi
+df['bills_electricity_yn'] = df['bills'].apply(lambda x: 1 if 'electricity included' in x.lower() else 0)                   #electricity
+df['bills_water_yn'] = df['bills'].apply(lambda x: 1 if 'water included' in x.lower() else 0)                               #water
+df['bills_gas_yn'] = df['bills'].apply(lambda x: 1 if 'gas included' in x.lower() else 0)                                   #gas
+df['bills_wifi_yn'] = df['bills'].apply(lambda x: 1 if 'wifi included' in x.lower() else 0)                                 #wifi
 
 
 # defining property features
-df['property_features'] = df['property_features'].apply(lambda x: ' '.join(str(x).splitlines())) #transforming multiple text lines into list and converting list to string  
+df['property_features'] = df['property_features'].apply(lambda x: ' '.join(str(x).splitlines()))                            #transforming multiple text lines into list and converting list to string  
 
 df['feature_furnished_yn'] = df['property_features'].apply(lambda x: 1 if 'furnished' in x.lower() else 0)                  #furnished
 df['feature_dishwasher_yn'] = df['property_features'].apply(lambda x: 1 if 'dishwasher' in x.lower() else 0)                #dishwasher
@@ -164,21 +164,81 @@ df['feature_elevator_yn'] = df['property_features'].apply(lambda x: 1 if 'elevat
 df['deposit'] = df['deposit'].apply(lambda x: x[0] if "month's rent" in x.lower() or "months' rent" in x.lower() else x).apply(lambda x: x.split('€')[0]).apply(lambda x: 0 if 'undefined' in x.lower() else x).apply(lambda x: str(x).replace(",", ""))
 df['deposit'] = df.apply(lambda x: int(x['deposit']) * x['monthly_price_avg'] if int(x['deposit']) <= 4 else int(x['deposit']), axis = 1)   
 
+
 #languages (english, german, russian, spanish)
-df['property_rules'] = df['property_rules'].apply(lambda x: ' '.join(str(x).splitlines())) #transforming multiple text lines into list and converting list to string
+df['property_rules'] = df['property_rules'].apply(lambda x: ' '.join(str(x).splitlines()))                                  #transforming multiple text lines into list and converting list to string
 
 df['english_spoken_yn'] = df['property_rules'].apply(lambda x: 1 if 'english' in x.lower() else 0)                          #english
 df['german_spoken_yn'] = df['property_rules'].apply(lambda x: 1 if 'german' in x.lower() else 0)                            #german
 df['russian_spoken_yn'] = df['property_rules'].apply(lambda x: 1 if 'russian' in x.lower() else 0)                          #russian
 df['spanish_spoken_yn'] = df['property_rules'].apply(lambda x: 1 if 'spanish' in x.lower() else 0)                          #spanish
 
-#apartment size
+
+#property size
 def size(prop_type):
     if 'm2' in prop_type:
         return int(prop_type.split()[-2])
     else:
         return 0
 
-df['property_size'] = df['property_type'].apply(size)
+df['total_living_space'] = df['property_type'].apply(size)
 
-#calculating property size per person if a property type is a room
+
+#calculating living space per person taking into consideration different types of property
+#On average, every inhabitant has access to 44.6 square metres of living space.
+
+df['living_space_per_person'] = df.apply(lambda x: x['total_living_space'] / x['flatmates'] if x['flatmates'] > 0 else x['total_living_space'], axis=1)
+
+
+df_1 = df[df['living_space_per_person'] > 1].groupby('property').mean()['living_space_per_person']                          #calculating avg space per property for apartment, room, studio
+
+df['space_per_person'] = df.apply(lambda x: df_1[0] if x['living_space_per_person'] <= 1 and 'Apartment' in x['property'] else x['living_space_per_person'], axis = 1)
+df['space_per_person'] = df.apply(lambda x: df_1[1] if x['living_space_per_person'] <= 1 and 'Room' in x['property'] else x['space_per_person'], axis = 1)
+df['space_per_person'] = df.apply(lambda x: df_1[2] if x['living_space_per_person'] <= 1 and 'Studio' in x['property'] else x['space_per_person'], axis = 1)
+
+#updating missing property size values with (avg space per property * number of flatmates)
+df['total_space'] = df.apply(lambda x: x['space_per_person'] * x['flatmates'] if x['total_living_space'] <= 5 and x['flatmates'] > 0 else x['total_living_space'], axis = 1)
+df['total_space'] = df.apply(lambda x: x['space_per_person'] if x['total_space'] == 0 and x['flatmates'] == 0 else x['total_space'], axis = 1)
+
+#checking if every inhabitant has access to 44.6 square metres of living space
+df['has_access_yn'] = df['space_per_person'].apply(lambda x: 1 if x >= 44.6 else 0)
+
+#print(df.columns.tolist())
+
+df_eda = df[['district',
+             'property', 
+             'flatmates',
+             'deposit',
+             'monthly_price_avg',
+             'space_per_person', 
+             'total_space', 
+             'has_access_yn',
+             'bills_electricity_yn', 
+             'bills_water_yn', 
+             'bills_gas_yn', 
+             'bills_wifi_yn', 
+             'feature_furnished_yn', 
+             'feature_dishwasher_yn', 
+             'feature_washing_machine_yn', 
+             'feature_equipped_kitchen_yn', 
+             'feature_balcony_yn', 
+             'feature_parking_yn', 
+             'feature_tv_yn', 
+             'feature_oven_yn', 
+             'feature_elevator_yn', 
+             'english_spoken_yn', 
+             'german_spoken_yn', 
+             'russian_spoken_yn', 
+             'spanish_spoken_yn',
+             'Main title', 
+             'property_type', 
+             'monthly_rent', 
+             'bills', 
+             'property_features', 
+             'property_rules', 
+             'monthly_price_min', 
+             'monthly_price_max',  
+             'total_living_space', 
+             'living_space_per_person']]
+
+df_eda.to_csv('df_eda.csv', index=False)
