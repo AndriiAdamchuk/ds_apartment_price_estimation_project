@@ -295,7 +295,7 @@ bathrooms
 65
 m2","Monthly rent
 499 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished Dishwasher Washing machine Dryer Exterior Equipped kitchen Central water heating Heating Oven 65 m2,"Landlord policies Registration is possible Languages spoken: English, German Lives on property: no Payment method: bank transfer Check-in/out: Check-in hours: 09:00 - 12:00 Check-out cleaning fee: €50 (to be paid at the start of your tenancy) Additional documentation: ID / Passport Work Contract University Acceptance letter (if applicable) Recent Paychecks / Bank Statement Guarantor Variable rent: (to cover VAT) Staying 2-6 months: the rent price shown increases by 7% to cover VAT Staying longer than 6 months: price as shown Note: The deposit must be transferred to the landlord before you check-in",499,499,65,16.25
-Moabi,Apartment,0,1320.0,1320.0,82.0,82.0,1,0,0,0,0,1,0,1,1,0,0,0,0,0,1,0,0,0,"Large 2-bedroom apartment for rent in Moabit, near city centre","Apartment
+Moabit,Apartment,0,1320.0,1320.0,82.0,82.0,1,0,0,0,0,1,0,1,1,0,0,0,0,0,1,0,0,0,"Large 2-bedroom apartment for rent in Moabit, near city centre","Apartment
 2
 bedrooms
 1
@@ -953,7 +953,7 @@ bathrooms
 105
 m2","Monthly rent
 540 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished Washing machine Exterior Elevator Equipped kitchen Central water heating Heating Oven 105 m2,"Landlord policies Languages spoken: English, German, Russian Lives on property: no Payment method: bank transfer Overnight guests: not allowed Registration is provided Important: none of the rooms have an independent key. Documents required: Proof of income (last 3 months) or work contract: yes Proof of enrollment (students): yes Guarantor (if you don't have proof of income): yes Copy of guarantor's ID: yes Copy of guarantor's work contract: yes The landlord only accepts tenants under the age of 35. This landlord only accept bookings starting at the beginning/end of the month Check-in/out: Check-in hours: Monday - Friday from 10:00 - 16:00 You will have to pick up your key at the landlord's office. You will receive the address once your booking is confirmed.",540,540,105,17.5
-Moabi,Room,4,950.0,490.0,23.192179894179898,92.76871957671959,0,1,1,1,1,1,0,1,1,0,0,0,1,0,1,1,0,0,Room for rent in apartment with 4 bedrooms near Fritz-Schloß Park in Moabit,"Room
+Moabit,Room,4,950.0,490.0,23.192179894179898,92.76871957671959,0,1,1,1,1,1,0,1,1,0,0,0,1,0,1,1,0,0,Room for rent in apartment with 4 bedrooms near Fritz-Schloß Park in Moabit,"Room
 4
 flatmates
 1
@@ -1143,7 +1143,7 @@ flatmates
 2
 bathrooms","Monthly rent
 680 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished Dishwasher Washing machine Dryer Exterior Elevator Equipped kitchen Balcony or terrace Oven,"Landlord policies Languages spoken: English, German, Russian Payment method: bank transfer Documents required: Passport / ID Proof of income (last 3 months) OR work contract Proof of enrollment (for students only) Guarantor (only if no proof of income) Copy of guarantor's ID (only if no proof of income) Copy of guarantor's work contract (only if no proof of income) The landlord only accepts tenants under the age of 35 Other costs: Rundfunkbeitrag (German broadcasting licence fees): not included in rent (€17.50 per month for the whole apartment) Registration is possible! Surcharge for common laundry room 2.80€ washing machine 2.50€ dryer",680,680,0,0.0
-Moabi,Room,4,950.0,490.0,23.192179894179898,92.76871957671959,0,1,1,1,1,1,0,1,1,0,0,0,1,0,1,1,0,0,Room for rent in apartment with 4 bedrooms near Fritz-Schloß Park in Moabit,"Room
+Moabit,Room,4,950.0,490.0,23.192179894179898,92.76871957671959,0,1,1,1,1,1,0,1,1,0,0,0,1,0,1,1,0,0,Room for rent in apartment with 4 bedrooms near Fritz-Schloß Park in Moabit,"Room
 4
 flatmates
 1
@@ -1173,7 +1173,7 @@ flatmates
 1
 bathrooms","Monthly rent
 450 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished Washing machine Exterior Equipped kitchen Balcony or terrace Oven,"Landlord policies Languages spoken: English, German Lives on property: no Payment method: bank transfer Cleaning fee: 50€ (payable before check in) Additional documentation: ID / Passport Landlord provides registration Maximum age 35 years The deposit must be paid as soon as the tenant receives the rental contract",450,450,0,0.0
-Westen,Room,6,700.0,453.0,26.833333333333332,161.0,0,1,1,1,1,1,0,1,1,1,0,0,1,1,1,1,1,0,Room with single bed for rent in 6-bedroom apartment in Westend,"Room
+Westend,Room,6,700.0,453.0,26.833333333333332,161.0,0,1,1,1,1,1,0,1,1,1,0,0,1,1,1,1,1,0,Room with single bed for rent in 6-bedroom apartment in Westend,"Room
 6
 flatmates
 1
@@ -1453,7 +1453,7 @@ flatmates
 1
 bathrooms","Monthly rent
 490 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished Washing machine Exterior Equipped kitchen Balcony or terrace Oven,"Landlord policies Languages spoken: English, German Lives on property: no Payment method: bank transfer Cleaning fee: 50€ (payable before check in) Additional documentation: ID / Passport Landlord provides registration Maximum age 35 years The deposit must be paid as soon as the tenant receives the rental contract",490,490,0,0.0
-Moabi,Room,5,950.0,490.0,20.8,104.0,0,1,1,1,1,1,0,1,1,1,0,0,1,0,1,1,0,0,Cute room for rent in bright 5-bedroom apartment in Moabit,"Room
+Moabit,Room,5,950.0,490.0,20.8,104.0,0,1,1,1,1,1,0,1,1,1,0,0,1,0,1,1,0,0,Cute room for rent in bright 5-bedroom apartment in Moabit,"Room
 5
 flatmates
 1
@@ -1475,7 +1475,7 @@ bathrooms
 1
 m2","Monthly rent
 550 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished TV Washing machine Exterior Elevator Equipped kitchen Balcony or terrace Other heating system Oven 1 m2,"Landlord policies Languages spoken: English, German, Russian Payment method: bank transfer Documents required: Passport / ID Proof of income (last 3 months) OR work contract Proof of enrollment (for students only) Guarantor (only if no proof of income) Copy of guarantor's ID (only if no proof of income) Copy of guarantor's work contract (only if no proof of income) The landlord only accepts tenants under the age of 35 Other costs: Rundfunkbeitrag (German broadcasting licence fees): not included in rent (€17.50 per month for the whole apartment) Registration is possible! Surcharge for common laundry room 2.80€ washing machine 2.50€ dryer",550,550,1,0.3333333333333333
-Moabi,Apartment,0,1740.0,1740.0,60.0,60.0,1,0,0,0,0,1,1,1,1,0,0,1,1,0,1,0,0,0,Stylish 3-bedroom apartment with central heat for rent in Moabit,"Apartment
+Moabit,Apartment,0,1740.0,1740.0,60.0,60.0,1,0,0,0,0,1,1,1,1,0,0,1,1,0,1,0,0,0,Stylish 3-bedroom apartment with central heat for rent in Moabit,"Apartment
 3
 bedrooms
 1
@@ -1555,7 +1555,7 @@ bathrooms
 92
 m2","Monthly rent
 480 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished Dishwasher Washing machine Exterior Equipped kitchen Balcony or terrace Central water heating Heating Oven 92 m2,"Landlord policies Languages spoken: English, German, Italian Lives on property: no Payment method: bank transfer Cleaning fee: €50 (payable before check in) Additional documentation: ID / Passport Landlord provides registration The landlord only accepts tenants under the age of 35. The deposit must be paid as soon as the tenant receives the rental contract",480,480,92,23.0
-Moabi,Room,6,700.0,349.0,21.5,129.0,0,1,1,1,1,1,0,1,0,0,0,0,1,0,1,1,1,0,Room with single bed for rent in 6-bedroom apartment in Moabit,"Room
+Moabit,Room,6,700.0,349.0,21.5,129.0,0,1,1,1,1,1,0,1,0,0,0,0,1,0,1,1,1,0,Room with single bed for rent in 6-bedroom apartment in Moabit,"Room
 6
 flatmates
 1
@@ -1813,7 +1813,7 @@ flatmates
 1
 bathrooms","Monthly rent
 520 €",Bills Electricity Included Water Included Gas Included Wifi Included,Dishwasher Washing machine Exterior Elevator Equipped kitchen Balcony or terrace Other heating system Oven,"Landlord policies Languages spoken: English, German, Russian Payment method: bank transfer Documents required: Passport / ID Proof of income (last 3 months) OR work contract Proof of enrollment (for students only) Guarantor (only if no proof of income) Copy of guarantor's ID (only if no proof of income) Copy of guarantor's work contract (only if no proof of income) The landlord only accepts tenants under the age of 35 Other costs: Rundfunkbeitrag (German broadcasting licence fees): not included in rent (€17.50 per month for the whole apartment) Registration is possible! Surcharge for common laundry room 2.80€ washing machine 2.50€ dryer",520,520,0,0.0
-Westen,Room,6,700.0,546.0,26.833333333333332,161.0,0,1,1,1,1,1,0,1,1,1,0,0,1,1,1,1,1,0,Room with single bed for rent in 6-bedroom apartment in Westend,"Room
+Westend,Room,6,700.0,546.0,26.833333333333332,161.0,0,1,1,1,1,1,0,1,1,1,0,0,1,1,1,1,1,0,Room with single bed for rent in 6-bedroom apartment in Westend,"Room
 6
 flatmates
 1
@@ -2123,7 +2123,7 @@ bathrooms
 37
 m2","Monthly rent
 629 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished Washing machine Interior Elevator Equipped kitchen Central water heating Heating Oven 37 m2,"Landlord policies Registration is possible Languages spoken: English, German Lives on property: no Payment method: bank transfer Check-in/out: Check-in hours: 09:00 - 12:00 Check-out cleaning fee: €50 (to be paid at the start of your tenancy) Additional documentation: ID / Passport Work Contract University Acceptance letter (if applicable) Recent Paychecks / Bank Statement Guarantor Variable rent: (to cover VAT) Staying 2-6 months: the rent price shown increases by 7% to cover VAT Staying longer than 6 months: price as shown Note: The deposit must be transferred to the landlord before you check-in",629,629,37,18.5
-Westen,Room,6,700.0,560.0,26.833333333333332,161.0,0,1,1,1,1,1,0,1,1,1,0,0,1,1,1,1,1,0,Room with single bed for rent in 6-bedroom apartment in Westend,"Room
+Westend,Room,6,700.0,560.0,26.833333333333332,161.0,0,1,1,1,1,1,0,1,1,1,0,0,1,1,1,1,1,0,Room with single bed for rent in 6-bedroom apartment in Westend,"Room
 6
 flatmates
 1
@@ -2929,7 +2929,7 @@ bathrooms
 71
 m2","Monthly rent
 1250 €",Bills Electricity Included Water Included Gas Included Wifi No internet,Furnished TV Dishwasher Washing machine Equipped kitchen Parking available Pet-friendly Central water heating Heating Oven 71 m2,"Landlord policies Languages spoken: English, German Lives on property: no Deposit: 3 month’s rent Payment method: bank transfer Documentation required: ID / Passport University acceptance letter Work contract",1250,1250,71,71.0
-Westen,Apartment,0,1000.0,1130.0,51.0,51.0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,Stylish 1-bedroom apartment with balcony for rent in Westend,"Apartment
+Westend,Apartment,0,1000.0,1130.0,51.0,51.0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,Stylish 1-bedroom apartment with balcony for rent in Westend,"Apartment
 1
 bedrooms
 1
@@ -3221,7 +3221,7 @@ bathrooms
 45
 m2","Monthly rent
 1290 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished TV Dishwasher Washing machine Equipped kitchen Pet-friendly Central water heating Heating Drying rack Oven 45 m2,"Landlord policies Languages spoken: English, German Lives on property: no Payment method: bank transfer Check-in/out: Check-out cleaning fee without a pet: €200 (payable at check-out) Check-out cleaning fee with a pet: €350 (payable at check-out) Additional documentation: ID / Passport Work Contract Recent Paychecks / Bank Statement Variable rent prices: Single occupancy: price as shown Double occupancy: price as shown + €100 per month",1290,1290,45,45.0
-Moabi,Room,6,700.0,361.0,21.5,129.0,0,1,1,1,1,1,0,1,0,0,0,0,1,0,1,1,1,0,Room with single bed for rent in 6-bedroom apartment in Moabit,"Room
+Moabit,Room,6,700.0,361.0,21.5,129.0,0,1,1,1,1,1,0,1,0,0,0,0,1,0,1,1,1,0,Room with single bed for rent in 6-bedroom apartment in Moabit,"Room
 6
 flatmates
 1
@@ -3439,7 +3439,7 @@ Friedrichshain,Studio,0,3285.0,1095.0,35.0,35.0,0,1,1,1,1,1,0,1,0,0,0,0,0,1,1,1,
 35
 m2","Monthly rent
 1095 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished Washing machine Dryer Elevator Doorman/Reception Central water heating Heating Clothes dryer 35 m2,"Landlord policies Payment method: bank transfer Additional documentation: ID / Passport University Acceptance letter (if applicable) Check-in/out: Check-in hours: 9:00-19:00 Special landlord policy: you need to transfer the deposit within 5 business days of the booking confirmation with Spotahome. This means that you will need to transfer the deposit as soon as the booking confirmed. If not, the landlord reserves the right to cancel the booking. Your landlord speaks: English, German Your landlord does not live on the property",1095,1095,35,35.0
-Moabi,Studio,0,2600.0,1300.0,45.0,45.0,1,1,1,0,1,1,1,1,1,0,1,1,1,0,1,1,0,0,Modern studio apartment for rent in Moabit,"Studio
+Moabit,Studio,0,2600.0,1300.0,45.0,45.0,1,1,1,0,1,1,1,1,1,0,1,1,1,0,1,1,0,0,Modern studio apartment for rent in Moabit,"Studio
 1
 bathrooms
 45
@@ -3579,7 +3579,7 @@ flatmates
 2
 bathrooms","Monthly rent
 580 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished Washing machine Elevator Equipped kitchen Central water heating Heating Oven,"Landlord policies Languages spoken: English, German, Russian Lives on property: no Payment method: bank transfer Overnight guests: not allowed Registration is provided Important: none of the rooms have an independent key. Documents required: Proof of income (last 3 months) or work contract: yes Proof of enrollment (students): yes Guarantor (if you don't have proof of income): yes Copy of guarantor's ID: yes Copy of guarantor's work contract: yes The landlord only accepts tenants under the age of 35. This landlord only accept bookings starting at the beginning/end of the month Check-in/out: Check-in hours: Monday - Friday from 10:00 - 16:00 You will have to pick up your key at the landlord's office. You will receive the address once your booking is confirmed.",580,580,0,0.0
-Moabi,Apartment,0,1749.0,1749.0,60.851851851851855,60.851851851851855,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,0,0,0,Apartment with 1 bedroom for rent near Fritz-Schloß-Park in Moabit,"Apartment
+Moabit,Apartment,0,1749.0,1749.0,60.851851851851855,60.851851851851855,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,0,0,0,Apartment with 1 bedroom for rent near Fritz-Schloß-Park in Moabit,"Apartment
 1
 bedrooms
 1
@@ -3941,7 +3941,7 @@ bathrooms
 41
 m2","Monthly rent
 1199 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished Dishwasher Washing machine Equipped kitchen Electric water heating Heating Drying rack Oven 41 m2,"Landlord policies Languages spoken: English, German Deposit: 2 months' rent Lives on property: no Payment method: cash; bank transaction Possibility of domiciliation: yes Documents required: Copy of passport: yes Haftpflichtversicherung (liability insurance): yes Proof of enrollment: yes, if you are a student",1199,1199,41,41.0
-Moabi,Studio,0,950.0,950.0,23.0,23.0,0,1,1,0,1,1,1,1,1,0,0,1,0,1,1,1,0,0,Studio apartment for rent in Moabit,"Studio
+Moabit,Studio,0,950.0,950.0,23.0,23.0,0,1,1,0,1,1,1,1,1,0,0,1,0,1,1,1,0,0,Studio apartment for rent in Moabit,"Studio
 1
 bathrooms
 23
@@ -4861,7 +4861,7 @@ bathrooms
 36
 m2","Monthly rent
 850 €",Bills Electricity Included Water Included Gas Included Wifi Not included Estimation requested to Landlord,Furnished TV Washing machine Exterior Equipped kitchen Central water heating Heating 36 m2,"Landlord policies Deposit: 2 months’ rent Payment method: cash; bank transfer Additional documentation: ID / Passport Work Contract University Acceptance letter (if applicable) Recent Paychecks / Bank Statement Your landlord speaks: English, German Your landlord does not live on the property.",850,850,36,36.0
-Moabi,Studio,0,1100.0,1100.0,25.0,25.0,0,1,1,1,1,1,1,1,1,0,0,1,0,1,1,1,0,0,Studio apartment for rent in Moabit,"Studio
+Moabit,Studio,0,1100.0,1100.0,25.0,25.0,0,1,1,1,1,1,1,1,1,0,0,1,0,1,1,1,0,0,Studio apartment for rent in Moabit,"Studio
 1
 bathrooms
 25
@@ -5829,7 +5829,7 @@ bathrooms
 70
 m2","Monthly rent
 1100 €",Bills Electricity Included Water Included Gas Included Wifi Included,Furnished TV Dishwasher Washing machine Elevator Equipped kitchen Balcony or terrace Electric water heating Heating Oven 70 m2,"Landlord policies Languages spoken: German, English, Spanish, Portuguese Lives on property: no Deposit: 1 month’s rent Payment method: cash Possibility of domiciliation: yes Additional documentation: ID / Passport University Acceptance letter (if applicable)",1100,1100,70,70.0
-Moabi,Apartment,0,4300.0,2150.0,104.0,104.0,1,1,1,1,1,1,1,1,1,1,0,0,1,0,1,1,0,0,"Apartment with 4-bedrooms for rent in Moabit, Berlin","Apartment
+Moabit,Apartment,0,4300.0,2150.0,104.0,104.0,1,1,1,1,1,1,1,1,1,1,0,0,1,0,1,1,0,0,"Apartment with 4-bedrooms for rent in Moabit, Berlin","Apartment
 4
 bedrooms
 2
