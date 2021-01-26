@@ -38,8 +38,8 @@ def district(name):
         return 'Friedenau'
     elif 'tempelhof' in name.lower():
         return 'Tempelhof'
-    elif 'moabi' in name.lower():
-        return 'Moabi'
+    elif 'moabi' in name.lower() or 'moabit' in name.lower():
+        return 'Moabit'
     elif 'treptow-köpenick' in name.lower():
         return 'Treptow-Köpenick'
     elif 'tempelhof-schöneberg' in name.lower():
@@ -60,8 +60,8 @@ def district(name):
         return 'Spandau'
     elif 'reinickendorf' in name.lower():
         return 'Reinickendorf'
-    elif 'westen' in name.lower():
-        return 'Westen'
+    elif 'westen' in name.lower() or 'westend' in name.lower():
+        return 'Westend'
     elif 'adlershof' in name.lower():
         return 'Adlershof'
     elif 'schönefeld' in name.lower() or 'schulzendorf' in name.lower():
