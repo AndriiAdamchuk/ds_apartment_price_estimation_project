@@ -31,6 +31,7 @@ model.fit().summary()
 
 from sklearn.linear_model import LinearRegression, Lasso
 from sklearn.model_selection import cross_val_score
+from sklearn.metrics import mean_squared_error
 
 lm = LinearRegression()
 lm.fit(X_train,y_train) 
@@ -77,6 +78,12 @@ gs = GridSearchCV(rf,parameters,scoring='neg_mean_absolute_error', cv=3)
 gs.fit(X_train,y_train)
 
 gs.best_score_
-gs.best_estimator_
+final_model = gs.best_estimator_
+
+final_predictions = final_model.predict(X_test)
+final_mse = mean_squared_error(y_test, final_predictions)
+final_rmse = np.sqrt(final_mse)
+
+
 
 
