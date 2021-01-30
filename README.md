@@ -55,10 +55,10 @@ Cleaned the data to use for my model. The following changes have been made:
 ## Exploratory Data Analysis
 I checked the data distribution, correlation between features, counts categorical variables. Some graphs below. 
 
-![](images/hist.png)
-![](images/hist3.png)
-![](images/map.png)
-![](images/corrplot.png)
+![](images/ds_apartment_price_estimation_newplot.png)
+![](images/ds_apartment_price_estimation_hist3.png)
+![](images/ds_apartment_price_estimation_map.png)
+![](images/ds_apartment_price_estimation_corrplot.png)
 
 
 
