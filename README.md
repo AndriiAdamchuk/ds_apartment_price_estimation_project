@@ -55,10 +55,13 @@ Cleaned the data to use for my model. The following changes have been made:
 ## Exploratory Data Analysis
 I checked the data distribution, correlation between features, counts categorical variables. Some graphs below. 
 
-![](images/corrplot.png)
 ![](images/hist.png)
 ![](images/hist3.png)
 ![](images/map.png)
+![](images/corrplot.png)
+
+
+
 
   
   
