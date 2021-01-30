@@ -53,10 +53,16 @@ Cleaned the data to use for my model. The following changes have been made:
 - Created columns for property size, living space per person, if every inhabitant can have an access to 44.6 square metres of living space (german baseline)
 
 ## Exploratory Data Analysis
+I checked the data distribution, correlation between features, counts categorical variables. Some graphs below. 
+
+![](images/hist.png)
+![](images/hist3.png)
+![](images/map.png)
+![](images/corrplot.png)
 
 
-  
-  
+
+
   
   
   
