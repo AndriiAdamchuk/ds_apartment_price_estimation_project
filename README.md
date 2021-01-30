@@ -78,7 +78,8 @@ I checked the data distribution, correlation between features, counts categorica
 ## Model Performance
 The Random Forest performed better then the rest models.
 
-- __Random Forest: MAE =  53.73__
+- __Random Forest__: MAE =  53.73
+
 - __Lasso Regression__: MAE = 86.19
 - __RidgeRegression__: MAE = 87.47
 - __Multiple Linear Regression__: MAE = 88.70
