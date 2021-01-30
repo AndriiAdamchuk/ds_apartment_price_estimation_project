@@ -60,9 +60,32 @@ I checked the data distribution, correlation between features, counts categorica
 ![](images/ds_apartment_price_estimation_map.png)
 ![](images/ds_apartment_price_estimation_corrplot.png)
 
+## Model Building
 
-
-
+- Transformed categorical variables into dummy variables. 
+- Split data into train and test sets. Train set (30%).
+- Used Mean Absolute Error to evaluate models. MAE was used because outliers are not bad for this type of model.
+- Tried 6 models:
+  - __Multiple Linear Regression__ - baseline for the model
+  - __Random Forest__ - data has a lot of sparcity I decided to try RF __(best result)__
+  - __RidgeRegression__ - works with small dataset and large number of features
+  - __Lasso Regression__ - works with small dataset and large number of features
+  - __ElasticNet__ 
+  - __Support Vector Regression (kernel='linear')__ - works with small dataset and large number of features  __(worst result)__
   
   
-  
+
+## Model Performance
+The Random Forest performed better then the rest models.
+
+- __Random Forest: MAE =  53.73__
+- __Lasso Regression__: MAE = 86.19
+- __RidgeRegression__: MAE = 87.47
+- __Multiple Linear Regression__: MAE = 88.70
+- __ElasticNet__: MAE = 96.04
+- __Support Vector Regression (kernel='linear')__: MAE = 371.62
+
+
+## Production
+...
+
